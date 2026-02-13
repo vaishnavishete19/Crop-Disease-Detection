@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Disease Detection</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+    <h1>🌱 Crop Disease Detection (Input Based)</h1>
+
+    <form method="POST">
+        <input type="number" step="any" name="temperature" placeholder="Temperature" required><br><br>
+        <input type="number" step="any" name="humidity" placeholder="Humidity" required><br><br>
+        <input type="number" step="any" name="soil_moisture" placeholder="Soil Moisture" required><br><br>
+        <input type="number" step="any" name="ph" placeholder="pH Level" required><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
